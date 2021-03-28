@@ -7,7 +7,7 @@ public class AddressBookMain {
         System.out.println("Welcome to address book");
         AddressBookMain addressBookMain = new AddressBookMain();
         addressBookMain.contact = addressBookMain.getUserInput();
-        //System.out.println("new Contact---->" + addressBookMain.contact);
+        System.out.println("new Contact---->" + addressBookMain.contact);
     }
 
     private Contact getUserInput() {
@@ -24,12 +24,12 @@ public class AddressBookMain {
         String state = scanner.nextLine();
         System.out.println("Enter email:");
         String email = scanner.nextLine();
-        System.out.println("Enter phone address:");
+        System.out.println("Enter address:");
         String address = scanner.nextLine();
         System.out.println("Enter zip:");
         String zip = scanner.nextLine();
-        return contact;
-        //return new Contact(firstName, lastName, phoneNumber);
+        //return contact;
+        return new Contact(firstName, lastName, phoneNumber,city,state,email,address,zip);
     }
     public boolean createContact(Contact contact) {
         this.contact = contact;
