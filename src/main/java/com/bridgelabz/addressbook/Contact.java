@@ -1,22 +1,15 @@
 package com.bridgelabz.addressbook;
 
-public class Contacts {
+public class Contact {
        private String firstName;
        private String lastName;
-       private String address;
+       private String phone;
        private String city;
        private String state;
-       private int zip;
-       private String phone;
        private String email;
+       private String zip;
+       private String address;
 
-       public String getAddress() {
-              return address;
-       }
-
-       public void setAddress(String address) {
-              this.address = address;
-       }
 
        public String getCity() {
               return city;
@@ -34,20 +27,28 @@ public class Contacts {
               this.state = state;
        }
 
-       public int getZip() {
-              return zip;
-       }
-
-       public void setZip(int zip) {
-              this.zip = zip;
-       }
-
        public String getEmail() {
               return email;
        }
 
        public void setEmail(String email) {
               this.email = email;
+       }
+
+       public String getZip() {
+              return zip;
+       }
+
+       public void setZip(String zip) {
+              this.zip = zip;
+       }
+
+       public String getAddress() {
+              return address;
+       }
+
+       public void setAddress(String address) {
+              this.address = address;
        }
 
 
@@ -76,28 +77,28 @@ public class Contacts {
               this.phone = phone;
        }
 
-       public Contacts(String firstName, String lastName, String address, String city, String state, int zip, String phone, String email) {
+       public Contact(String firstName, String lastName, String phone, String city, String state, String email, String zip, String address) {
               this.firstName = firstName;
               this.lastName = lastName;
-              this.address = address;
+              this.phone = phone;
               this.city = city;
               this.state = state;
-              this.zip = zip;
-              this.phone = phone;
               this.email = email;
+              this.zip = zip;
+              this.address = address;
        }
 
        @Override
        public String toString() {
-              return "Contacts{" +
+              return "Contact{" +
                       "firstName='" + firstName + '\'' +
                       ", lastName='" + lastName + '\'' +
-                      ", address='" + address + '\'' +
+                      ", phone='" + phone + '\'' +
                       ", city='" + city + '\'' +
                       ", state='" + state + '\'' +
-                      ", zip=" + zip +
-                      ", phone='" + phone + '\'' +
                       ", email='" + email + '\'' +
+                      ", zip='" + zip + '\'' +
+                      ", address='" + address + '\'' +
                       '}';
        }
 }
