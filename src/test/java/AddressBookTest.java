@@ -21,4 +21,5 @@ public class AddressBookTest {
         boolean contactStatus = addressBookMain.createContact(contact);
         Assert.assertEquals(false, contactStatus);
     }
+
 }

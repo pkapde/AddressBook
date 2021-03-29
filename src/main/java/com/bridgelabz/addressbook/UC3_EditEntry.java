@@ -72,7 +72,7 @@ public class UC3_EditEntry {
     }
 
     // method to edit contact details
-    private void editContact() {
+    public void editContact() {
         int match = -1;
         Scanner sc = new Scanner(System.in);
         System.out.println("enter first name of person whose contact details you wants to edit");
@@ -160,6 +160,7 @@ public class UC3_EditEntry {
 
             }
 
+
         }
 
     }
@@ -167,9 +168,7 @@ public class UC3_EditEntry {
 
     // main function
     public static void main(String[] args) {
-
         System.out.println("this is address book edit entry feature");
-
         UC3_EditEntry editEntry = new UC3_EditEntry();
         editEntry.addContact(editEntry.getContactDetails());
         editEntry.editContact();
