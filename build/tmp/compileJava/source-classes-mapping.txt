@@ -1,5 +1,5 @@
-com/bridgelabz/addressbook/UC8_SearchPersonInCityOrState.java
- com.bridgelabz.addressbook.UC8_SearchPersonInCityOrState
+com/bridgelabz/addressbook/Contact.java
+ com.bridgelabz.addressbook.Contact
 com/bridgelabz/addressbook/UC5_MultipleContacts.java
  com.bridgelabz.addressbook.UC5_MultipleContacts
 com/bridgelabz/addressbook/UC6_MultipleAddressBooks.java
@@ -12,5 +12,9 @@ com/bridgelabz/addressbook/UC7_NoDuplicate.java
  com.bridgelabz.addressbook.UC7_NoDuplicate
 com/bridgelabz/addressbook/AddressBookMain.java
  com.bridgelabz.addressbook.AddressBookMain
-com/bridgelabz/addressbook/Contact.java
- com.bridgelabz.addressbook.Contact
+com/bridgelabz/addressbook/UC8_SearchPersonInCityOrState.java
+ com.bridgelabz.addressbook.UC8_SearchPersonInCityOrState
+com/bridgelabz/addressbook/UC10_CountOfPerson.java
+ com.bridgelabz.addressbook.UC10_CountOfPerson
+com/bridgelabz/addressbook/UC9_SearchByCityOrState.java
+ com.bridgelabz.addressbook.UC9_SearchByCityOrState
