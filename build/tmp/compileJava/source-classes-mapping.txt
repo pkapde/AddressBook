@@ -1,4 +1,6 @@
 com/bridgelabz/addressbook/Contact.java
  com.bridgelabz.addressbook.Contact
+com/bridgelabz/addressbook/UC3_EditEntry.java
+ com.bridgelabz.addressbook.UC3_EditEntry
 com/bridgelabz/addressbook/AddressBookMain.java
  com.bridgelabz.addressbook.AddressBookMain

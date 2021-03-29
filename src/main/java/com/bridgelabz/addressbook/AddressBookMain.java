@@ -1,14 +1,23 @@
 package com.bridgelabz.addressbook;
-import java.util.Scanner;
+import java.util.*;
 
 public class AddressBookMain {
     Contact contact;
+    //Map.Entry[] contents;
+    //private static List<Contact> Contact = new ArrayList<Contact>();
     public static void main(String[] args) {
         System.out.println("Welcome to address book");
+
         AddressBookMain addressBookMain = new AddressBookMain();
         addressBookMain.contact = addressBookMain.getUserInput();
+        //UC3_EditEntry entry3 = new UC3_EditEntry();
+        //addressBookMain.contact = addressBookMain.editEntry();
+        //addressBookMain.contact = addressBookMain.deleteByFirstName();
         System.out.println("new Contact---->" + addressBookMain.contact);
+
     }
+
+
 
     private Contact getUserInput() {
         Scanner scanner = new Scanner(System.in);
@@ -38,5 +47,6 @@ public class AddressBookMain {
         }
         return true;
     }
+
 
 }
