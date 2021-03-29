@@ -10,3 +10,5 @@ com/bridgelabz/addressbook/UC5_MultipleContacts.java
  com.bridgelabz.addressbook.UC5_MultipleContacts
 com/bridgelabz/addressbook/UC6_MultipleAddressBooks.java
  com.bridgelabz.addressbook.UC6_MultipleAddressBooks
+com/bridgelabz/addressbook/UC7_NoDuplicate.java
+ com.bridgelabz.addressbook.UC7_NoDuplicate
