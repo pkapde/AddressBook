@@ -9,8 +9,11 @@ public class Contact {
        private String city;
        private String state;
        private String email;
-       private String zip;
+       private int zip;
        private String address;
+
+       public Contact(String firstName, String lastName, String address, String cityName, String stateName, int zipCode, String phoneNumber, String emailAddress) {
+       }
 
 
        public String getCity() {
@@ -37,11 +40,11 @@ public class Contact {
               this.email = email;
        }
 
-       public String getZip() {
+       public int getZip() {
               return zip;
        }
 
-       public void setZip(String zip) {
+       public void setZip(int zip) {
               this.zip = zip;
        }
 
@@ -79,7 +82,7 @@ public class Contact {
               this.phone = phone;
        }
 
-       public Contact(String firstName, String lastName, String phone, String city, String state, String email, String zip, String address) {
+       public Contact(String firstName, String lastName, String phone, String city, String state, String email, int zip, String address) {
               this.firstName = firstName;
               this.lastName = lastName;
               this.phone = phone;

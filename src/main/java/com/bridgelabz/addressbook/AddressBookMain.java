@@ -1,5 +1,4 @@
 package com.bridgelabz.addressbook;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -31,7 +30,7 @@ public class AddressBookMain {
         String emailAddress = scan.nextLine();
 
         System.out.println("enter zip code of address -- interger type");
-        String zipCode = scan.nextLine();
+        int zipCode = scan.nextInt();
 
         Contact entry = new Contact(firstName, lastName, address, cityName, stateName, zipCode,
                 phoneNumber, emailAddress);
@@ -72,19 +71,51 @@ public class AddressBookMain {
         }
         bookList.put(bookname, contactDetails);
     }
-    private static void sortByName() {
+    private static void sortByCity() {
         for (String i : bookList.keySet()) {
             System.out.println("Book name is : " + i);
             ArrayList<Contact> contactDetails = bookList.get(i);
             ArrayList<Contact> contacts = new ArrayList<>();
-            System.out.println("Sorting people by name : ");
+            System.out.println("Sorting people by City : ");
             for (int j = 0; j < contactDetails.size(); j++) {
                 contacts.add(contactDetails.get(j));
             }
-            List<Contact> sortedContacts = contacts.stream()
-                    .sorted((o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName())).collect(Collectors.toList());
+            List<Contact> sortedcontacts = contacts.stream()
+                    .sorted(Comparator.comparing(Contact::getCity)).collect(Collectors.toList());
 
-            for (Contact contact : sortedContacts) {
+            for (Contact contact : sortedcontacts) {
+                display(contact);
+            }
+        }
+    }
+    private static void sortByState() {
+        for (String i : bookList.keySet()) {
+            System.out.println("Book name is : " + i);
+            ArrayList<Contact> contactDetails = bookList.get(i);
+            ArrayList<Contact> contacts = new ArrayList<>();
+            System.out.println("Sorting people by State : ");
+            for (int j = 0; j < contactDetails.size(); j++) {
+                contacts.add(contactDetails.get(j));
+            }
+            List<Contact> sortedcontacts = contacts.stream()
+                    .sorted(Comparator.comparing(Contact::getState)).collect(Collectors.toList());
+            for (Contact contact : sortedcontacts) {
+                display(contact);
+            }
+        }
+    }
+    private static void sortByZip() {
+        for (String i : bookList.keySet()) {
+            System.out.println("Book name is : " + i);
+            ArrayList<Contact> contactDetails = bookList.get(i);
+            ArrayList<Contact> contacts = new ArrayList<>();
+            System.out.println("Sorting people by Zip : ");
+            for (int j = 0; j < contactDetails.size(); j++) {
+                contacts.add(contactDetails.get(j));
+            }
+            List<Contact> sortedcontacts = contacts.stream().sorted(Comparator.comparingInt(Contact::getZip))
+                    .collect(Collectors.toList());
+            for (Contact contact : sortedcontacts) {
                 display(contact);
             }
         }
@@ -103,6 +134,24 @@ public class AddressBookMain {
             }
         }
         System.out.println("address books and contact details added successfully ");
-        sortByName();
+        System.out.println("Select" + "\n1.  to sort by state" + "\n2. to sort by city" + "\n3. to sort by  pin");
+        Scanner sc = new Scanner(System.in);
+        int option = sc.nextInt();
+        switch (option) {
+            case 1:
+                sortByState();
+                break;
+
+            case 2:
+                sortByCity();
+                break;
+
+            case 3:
+                sortByZip();
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
     }
 }
