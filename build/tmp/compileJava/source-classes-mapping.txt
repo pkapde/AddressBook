@@ -1,14 +1,6 @@
-com/bridgelabz/addressbook/UC3_EditEntry.java
- com.bridgelabz.addressbook.UC3_EditEntry
 com/bridgelabz/addressbook/Contact.java
  com.bridgelabz.addressbook.Contact
-com/bridgelabz/addressbook/AddressBookMain.java
- com.bridgelabz.addressbook.AddressBookMain
-com/bridgelabz/addressbook/UC4_DeleteEnrty.java
- com.bridgelabz.addressbook.UC4_DeleteEntry
-com/bridgelabz/addressbook/UC5_MultipleContacts.java
- com.bridgelabz.addressbook.UC5_MultipleContacts
-com/bridgelabz/addressbook/UC6_MultipleAddressBooks.java
- com.bridgelabz.addressbook.UC6_MultipleAddressBooks
 com/bridgelabz/addressbook/UC7_NoDuplicate.java
  com.bridgelabz.addressbook.UC7_NoDuplicate
+com/bridgelabz/addressbook/AddressBookMain.java
+ com.bridgelabz.addressbook.AddressBookMain
