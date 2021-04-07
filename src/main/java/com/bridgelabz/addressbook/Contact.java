@@ -12,7 +12,6 @@ public class Contact {
        private String zip;
        private String address;
 
-
        public String getCity() {
               return city;
        }
