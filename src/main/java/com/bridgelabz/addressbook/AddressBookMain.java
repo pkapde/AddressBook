@@ -73,96 +73,38 @@ public class AddressBookMain {
 
     // method to edit contact details
     public void editContact() {
-        int match = -1;
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter first name of person whose contact details you wants to edit");
-        String name = sc.nextLine();
-        Contact contactToBeEdited = contactList.get(0);
-        System.out.println(contactList.get(0));
 
-        for (int j = 0; j < contactList.size(); j++) {
-            Contact conMatch = contactList.get(j);
-            System.out.println(conMatch.getFirstName());
-            if (name.equals(conMatch.getFirstName())) {
-                match = j;
-                contactToBeEdited = contactList.get(match);
+        System.out.println("Enter name of a person to edit contact details");
+        System.out.println("First Name : ");
+        String FirstName;
+        FirstName = sc.nextLine();
+        System.out.println("Last Name : ");
+        String LastName;
+        LastName = sc.nextLine();
 
-            } else {
-                System.out.println("no contact with this first name ");
+        for (int i = 0; i < contactList.size(); i++) {
+            if (FirstName.equalsIgnoreCase(contactList.get(i).getFirstName()) && LastName.equalsIgnoreCase(contactList.get(i).getLastName())) {
+                System.out.println("Address : ");
+                String address = sc.nextLine();
+                System.out.println("City : ");
+                String city = sc.nextLine();
+                System.out.println("State : ");
+                String state = sc.nextLine();
+                System.out.println("ZIP : ");
+                String zip = sc.nextLine();
+                System.out.println("Phone number : ");
+                String phone = sc.nextLine();
+                sc.nextLine();
+                System.out.println("Email ID : ");
+                String email = sc.nextLine();
+
+                Contact entry = new Contact(FirstName, LastName, address, city, state, zip, phone,
+                        email);
+                contactList.set(i, entry);
             }
-
         }
-
-        if (match != -1) {
-
-            System.out.print(" what you want to edit : "
-                    + "\n1. Zip Code" + "\n2. First Name" + "\n3  Last Name" + "\n4. Address"+ "\n5. City" + "\n6. State"
-
-                    + "\n7. Phone Number" + "\n8. Email");
-
-            int option = sc.nextInt();
-            sc.nextLine(); // catches the new line character
-
-            switch (option) {
-                case 1:
-                    System.out.println("enter  new zip code");
-                    String newZipCode = sc.nextLine();
-                    contactToBeEdited.setZip(newZipCode);
-                    break;
-
-                case 2:
-                    System.out.println("enter  new first name");
-                    String newFirstName = sc.nextLine();
-                    contactToBeEdited.setFirstName(newFirstName);
-                    break;
-
-                case 3:
-                    System.out.println("enter  new last name");
-                    String newLastName = sc.nextLine();
-                    contactToBeEdited.setFirstName(newLastName);
-                    break;
-
-                case 4 :
-                    System.out.println("enter  new street address");
-                    String address = sc.nextLine();
-                    contactToBeEdited.setAddress(address);
-                    break;
-
-
-
-                case 5:
-                    System.out.println("enter  new city name");
-                    String newcityName = sc.nextLine();
-                    contactToBeEdited.setCity(newcityName);
-                    break;
-
-                case 6:
-                    System.out.println("enter  new state name");
-                    String newStateName = sc.nextLine();
-                    contactToBeEdited.setState(newStateName);
-                    break;
-
-
-                case 7:
-                    System.out.println("enter  new phone number");
-                    String newPhoneNumber = sc.nextLine();
-                    contactToBeEdited.setPhone(newPhoneNumber);
-                    break;
-
-                case 8:
-                    System.out.println("enter  new email address");
-                    String newEmailAddress = sc.nextLine();
-                    contactToBeEdited.setEmail(newEmailAddress);
-                    break;
-
-                default:
-                    System.out.println("choice does not exist");
-
-            }
-
-
-        }
-
     }
     // main function
     public static void main(String[] args) {
